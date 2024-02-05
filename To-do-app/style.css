@@ -1,0 +1,127 @@
+:root {
+    --color-bg: rgb(22, 26, 48);
+    --color-bg2: rgb(49, 48, 77);
+    --color-content: rgb(240, 236, 229);
+    --color-content2: rgb(182, 187, 196);
+
+    --content-font-size: 18px;
+    --heading-font: 'Lora';
+    --content-font: 'Merriweather';
+    --content-padding: 0.5rem;
+    --content-margin: 0.25rem;
+    --content-border-radius: 0.5rem;
+    
+    color: var(--color-content);
+    font-family: var(--content-font);
+    font-size: var(--content-font-size);
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+}
+body {
+    background: var(--color-bg);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+.app {
+    background: linear-gradient(to bottom right, rgba(49, 48, 77, 1.0),rgba(49, 48, 77, 0.2) 60%);
+    
+    width: 750px;
+    border-radius: calc(var(--content-border-radius)*2);
+    padding: calc(var(--content-padding)*2);
+}
+.app-header {
+    border: 2px solid var(--color-content2);
+    border-radius: var(--content-border-radius);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: var(--content-padding);
+    margin: var(--content-margin);
+}
+.app-icon-container {
+    width: 50px;
+    height: 30px;
+}
+.app-content {
+    height: 500px;
+    margin: var(--content-margin);
+    
+    border: 2px solid var(--color-content2);
+    border-radius: var(--content-border-radius);
+    margin: calc(var(--content-margin)*3);
+}
+.input-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin: calc(var(--content-margin)*1.5);
+}
+input[type='text']{
+    border: none;
+    background: var(--color-content);
+    border-radius: calc(var(--content-border-radius)/2);
+    margin: var(--content-margin);
+    width: 60%; 
+}
+input[type='text']:focus {
+    outline: none;
+}
+#taskbox, #add-task-button, #clear-button {
+    font-size: 18px;
+    font-family: var(--content-font);
+    padding: calc(var(--content-padding)*0.75);
+
+    border: none;
+    border-radius: var(--content-border-radius);
+}
+#add-task-button {
+    cursor: pointer;
+}
+.line {
+    height: 2px;
+    background: linear-gradient(to right, rgba(240, 236, 229, 0.2) , rgba(240, 236, 229, 1.0) 20%, rgba(240, 236, 229, 1.0) 80%, rgba(240, 236, 229, 0.2));
+}
+.tasks {
+    display: flex;
+}
+.tasks-todo-field, .tasks-done-field {
+    border: 2px solid var(--color-content2);
+    border-radius: var(--content-border-radius);
+    margin: calc(var(--content-margin)*1.5);
+    width: 50%;
+    height: 420px;
+    padding: calc(var(--content-padding)/2);
+    position: relative;
+}
+
+ol {
+    margin: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+.task {
+    margin: 0.5rem;
+}
+#clear-button {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -25%);
+    
+    width: 50%;
+}

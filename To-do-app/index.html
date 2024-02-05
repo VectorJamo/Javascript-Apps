@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app">
+        <div class="app-header">
+            <h2>To-Do List</h2>
+            <div class="app-icon-container">
+                <img src="res/todo-icon.svg" alt="Todo Icon">
+            </div>  
+        </div>
+        <div class="app-content">
+            <div class="input-field">
+                <input id="taskbox" type="text" name="task">
+                <button id="add-task-button" name="submit" onclick="handleAddTask()">Add Task</button>
+            </div>
+            <div class="line"></div>
+            <div class="tasks">
+                <div class="tasks-todo-field">
+                    <h4>Tasks Todo</h4>
+                    <ol class="tasks-todo">
+
+                    </ol>
+                </div>
+                <div class="tasks-done-field">
+                    <h4>Tasks Done</h4>
+                    <ol class="tasks-done">
+
+                    </ol>
+                    <button id="clear-button" onclick="handleClearTask()">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
