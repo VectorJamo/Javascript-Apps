@@ -1,0 +1,42 @@
+body {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 5rem;
+
+    background: black;
+    color: white;
+}
+.content {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    align-content: center;
+
+    border: 2px solid white;
+    padding: 0.25rem;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.cell:active {
+    background: rgba(255, 255, 255, 0.8);
+}

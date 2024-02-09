@@ -1,0 +1,29 @@
+:root {
+    --content-width: 400px;
+    
+    --color-a: #FF9500;
+    --color-b: #1C1C1C;
+    --color-c: #505050;
+    --color-d: #D4D4D2;
+}
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+}
