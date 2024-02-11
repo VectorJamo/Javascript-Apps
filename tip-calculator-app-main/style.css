@@ -64,7 +64,7 @@ button {
     font-size: 0.75rem;
 }
 .content{
-    width: var(--content-width);
+    max-width: var(--content-width);
     background: var(--color-white);
     border-radius: 1rem;
     padding: 1rem;
@@ -167,4 +167,19 @@ button:hover, #reset-button:hover {
 }
 input[type="text"]:focus {
     outline: 2px solid var(--color-strong-cyan);
+}
+
+@media screen and (max-width: 700px){
+    body {
+        height: auto;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .left {
+        width: 100%;
+    }
+    .right {
+        width: 100%;
+    }
 }
