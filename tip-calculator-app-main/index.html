@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+      <div class="left">
+        <div class="bill-enter">
+          <div class="separated">
+            <label class="color-grey" id="bill-text" for="bill">Bill</label>
+            <span class="f-size-12 color-tomato bill-wrong"></span>
+          </div>
+          <input type="text" id="bill" name="bill" oninput="handleBillAmount(this)">
+        </div>
+        <div class="separated">
+          <label style="padding: 0;" class="color-grey">Select Tip %</label>
+          <span class="f-size-12 color-tomato tip-wrong"></span>            
+        </div>
+        <div class="tip-select">
+          <button class="color-white" onClick="tipClick(this, 5)">5%</button>
+          <button class="color-white" onClick="tipClick(this, 10)">10%</button>
+          <button class="color-white" onClick="tipClick(this, 15)">15%</button>
+          <button class="color-white" onClick="tipClick(this, 25)">25%</button>
+          <button class="color-white" onClick="tipClick(this, 50)">50%</button>
+          <input class="custom-tip" id="text-align-left" type="text" placeholder="Custom" name="custom-tip" oninput="handleCustomTip(this)">
+        </div>
+        <div class="no-of-people">
+          <div class="separated">
+            <label class="color-grey" for="people">No. of People</label>
+            <span class="f-size-12 color-tomato no-of-people-wrong"></span>
+          </div>
+          <input type="text" id="people" name="people" oninput="handleNoOfPeople(this)">
+        </div>
+      </div>
+    
+      <div class="right">
+        <div class="amounts">
+          <div class="display-amount">
+            <div>
+              <p class="color-white">Tip Amount</p>
+              <p class="f-size-12 color-white-dimmed">/ person</p>
+            </div>
+            <h1 class="color-strong-cyan tip-per-person">$0.00</h2>
+          </div>
+          <div class="display-amount">
+            <div>
+              <p class="color-white">Total</p>
+              <p class="f-size-12 color-white-dimmed">/ person</p>
+            </div>
+          <h1 class="color-strong-cyan total-per-person">$0.00</h2>
+        </div>
+      </div>
+    <button id="reset-button" onclick="handleReset()">RESET</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

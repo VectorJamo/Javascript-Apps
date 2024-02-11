@@ -1,0 +1,163 @@
+:root {
+    --font-main: 'Space Mono';
+    --font-weight: 700;
+    --form-font-size: 24px;
+
+    --color-strong-cyan: hsl(172, 67%, 45%);
+    --color-very-dark-cyan: hsl(183, 100%, 15%);
+    --color-dark-grayish-cyan:  hsl(186, 14%, 43%);
+    --color-grayish-cyan: hsl(184, 14%, 56%);
+    --color-light-grayish-cyan: hsl(185, 41%, 84%);
+    --color-very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --content-width: 50rem;
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    font-weight: var(--font-weight);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+body {
+    height: 100vh;
+    background: var(--color-light-grayish-cyan);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type="text"]{
+    background: var(--color-very-light-grayish-cyan);
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    font-size: var(--form-font-size);
+    color: var(--color-very-dark-cyan);
+    text-align: right;
+}
+#text-align-left {
+    text-align: left;
+}
+label {
+    display: inline-block;
+    padding: 0;
+    margin: 5px;
+}
+
+button {
+    font-size: var(--form-font-size);
+    padding: 0.25rem;
+}
+.content{
+    width: var(--content-width);
+    background: var(--color-white);
+    border-radius: 1rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1.5rem;
+}
+.left {
+    width: 50%;
+}
+.right {
+    width: 50%;
+    background: var(--color-very-dark-cyan);
+
+    padding: 2rem;
+
+    border-radius: 1rem;
+}
+.left > div {
+    margin: 1rem;
+}
+#bill {
+    padding: 0.25rem 0rem 0.25rem 1rem;
+    background: url('images/icon-dollar.svg'), var(--color-very-light-grayish-cyan);
+    background-position-x: 10px;
+    background-position-y: 55%;
+    
+    background-repeat: no-repeat;
+}
+#people {
+    padding: 0.25rem 0rem 0.25rem 1rem;
+    background: url('images/icon-person.svg'), var(--color-very-light-grayish-cyan);
+    background-position-x: 10px;
+    background-position-y: 55%;
+    
+    background-repeat: no-repeat;
+
+}
+#reset-button {
+    background: var(--color-strong-cyan);
+    border: none;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 5rem;
+}
+.tip-select {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    gap: 0.5rem;
+}
+.tip-select > button {
+    background: var(--color-very-dark-cyan);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+}
+.amounts > div {
+    margin-bottom: 3rem;
+}
+.display-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right button {
+    width: 100%;
+}
+.color-grey {
+    color: rgb(125, 125, 125);
+}
+.color-tomato {
+    color: rgba(245, 100, 74, 0.8);
+}
+.color-white {
+    color: white;
+}
+.color-white-dimmed {
+    color: rgba(255, 255, 255, 0.6);
+}
+.f-size-12 {
+    font-size: 12px;
+}
+.color-strong-cyan {
+    color: var(--color-strong-cyan);
+}
+.separated {
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button:hover, #reset-button:hover {
+    cursor: pointer;
+    background: var(--color-light-grayish-cyan);
+}
+input[type="text"]:focus {
+    outline: 2px solid var(--color-strong-cyan);
+}
