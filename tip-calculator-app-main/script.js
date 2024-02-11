@@ -43,8 +43,8 @@ function calculateTip(){
     const total_bill_with_tip = ((parseFloat(bill_amount) + tip_amount)).toFixed(2)
     const bill_value = ((total_bill_with_tip / parseFloat(no_of_people))).toFixed(2)
 
-    tip_per_person.innerHTML = tip_value
-    total_per_person.innerHTML = bill_value
+    tip_per_person.innerHTML = `$${tip_value}`
+    total_per_person.innerHTML = `$${bill_value}`
 }
 
 function handleBillAmount(element) {
@@ -105,6 +105,6 @@ function handleReset() {
 
     custom_tip.value = ''
     no_of_people_element.value = ''
-    tip_per_person.innerHTML = '0.00'
-    total_per_person.innerHTML = '0.00'
+    tip_per_person.innerHTML = '$0.00'
+    total_per_person.innerHTML = '$0.00'
 }

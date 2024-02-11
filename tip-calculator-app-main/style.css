@@ -31,8 +31,10 @@ body {
     background: var(--color-light-grayish-cyan);
     
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 3rem;
 }
 input[type="text"]{
     background: var(--color-very-light-grayish-cyan);
@@ -55,6 +57,11 @@ label {
 button {
     font-size: var(--form-font-size);
     padding: 0.25rem;
+}
+.header {
+    color: var(--color-dark-grayish-cyan);
+    letter-spacing: 0.5rem;
+    font-size: 0.75rem;
 }
 .content{
     width: var(--content-width);
